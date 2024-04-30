@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_about"
+    tools:context=".Socials">
+
+
+    <ImageView
+        android:id="@+id/socials_header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/img_socials"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/socials_twitter"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="80dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Twitter"
+        android:scaleType="fitCenter"
+        android:src="@drawable/twitter_logo"
+        app:layout_constraintBottom_toTopOf="@+id/socials_gmail"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/socials_ig"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="125dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Instagram"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ig_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/socials_fb"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="80dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Facebook"
+        android:scaleType="fitCenter"
+        android:src="@drawable/fb_logo"
+        app:layout_constraintBottom_toTopOf="@+id/socials_ig"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/socials_gmail"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="125dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Gmail"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gmail_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

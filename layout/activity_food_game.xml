@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundmain"
+    tools:context=".FoodGame">
+
+    <TextView
+        android:id="@+id/scoreboard"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:text="Score: 0"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:shadowColor="#000000"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:text="00:00"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/customer"
+        android:layout_width="228dp"
+        android:layout_height="353dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347"
+        app:srcCompat="@drawable/customerirish" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="412dp"
+        android:layout_height="319dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/table" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/ccbtn"
+        android:layout_width="171dp"
+        android:layout_height="136dp"
+        android:layout_marginBottom="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/amakercc"
+        app:layout_constraintBottom_toTopOf="@+id/Menu"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="151dp"
+        android:layout_height="201dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/optionstorer"
+        android:rotationX="-4"
+        android:rotationY="-0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/option1"
+            android:layout_width="74dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="48dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="option1"
+            android:rotationX="33"
+            android:rotationY="0"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/default1" />
+
+        <ImageButton
+            android:id="@+id/option2"
+            android:layout_width="86dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="2dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="option2"
+            android:rotation="0"
+            android:rotationX="33"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option1"
+            app:srcCompat="@drawable/default2" />
+
+        <ImageButton
+            android:id="@+id/option3"
+            android:layout_width="113dp"
+            android:layout_height="67dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="option3"
+            android:rotationX="17"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option2"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/default3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/orderlayout"
+        android:layout_width="221dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="248dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="220dp"
+            android:layout_height="79dp"
+            android:layout_marginBottom="4dp"
+            android:rotationX="33"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_wrapBehaviorInParent="vertical_only"
+            app:srcCompat="@drawable/servingplate" />
+
+        <ImageButton
+            android:id="@+id/order3"
+            android:layout_width="106dp"
+            android:layout_height="136dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="28dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="nalutonijabebi"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/popcorncheese" />
+
+        <ImageButton
+            android:id="@+id/order1"
+            android:layout_width="111dp"
+            android:layout_height="137dp"
+            android:layout_marginBottom="28dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="nalutonijabebi"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/popcorncheese" />
+
+        <ImageButton
+            android:id="@+id/order2"
+            android:layout_width="115dp"
+            android:layout_height="131dp"
+            android:layout_marginBottom="8dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="nalutonijabebi"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/order3"
+            app:layout_constraintHorizontal_bias="0.576"
+            app:layout_constraintStart_toEndOf="@+id/order1"
+            app:srcCompat="@drawable/ccpurple" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/drinksbtn"
+        android:layout_width="119dp"
+        android:layout_height="192dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/amakerdrinks"
+        app:layout_constraintBottom_toTopOf="@+id/ccbtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/popcornbtn"
+        android:layout_width="121dp"
+        android:layout_height="360dp"
+        android:layout_marginBottom="88dp"
+        android:src="@drawable/amakerpopcorn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="257dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/textbubble"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/popcornimg"
+            android:layout_width="83dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/popcorncheese" />
+
+        <ImageView
+            android:id="@+id/ccimg"
+            android:layout_width="83dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ccpink" />
+
+        <ImageView
+            android:id="@+id/drinksimg"
+            android:layout_width="83dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/drinkcherry" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/basura"
+        android:layout_width="212dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="1dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="basically a back button"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/trashcan" />
+
+    <ImageButton
+        android:id="@+id/Menu"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="pause and menu button"
+        android:rotationX="0"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pause" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conclick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MenuDisplay"
+        android:layout_width="351dp"
+        android:layout_height="417dp"
+        android:background="@drawable/ipad"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <ImageButton
+            android:id="@+id/Resume"
+            android:layout_width="112dp"
+            android:layout_height="103dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="100dp"
+            android:background="#02FFFFFF"
+            android:contentDescription="cancel"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/resume" />
+
+        <ImageButton
+            android:id="@+id/Restart"
+            android:layout_width="109dp"
+            android:layout_height="102dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="100dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="start again"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/restart" />
+
+        <ImageButton
+            android:id="@+id/Home"
+            android:layout_width="145dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="80dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="home"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/home" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sureask"
+        android:layout_width="351dp"
+        android:layout_height="417dp"
+        android:background="@drawable/ipad"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="249dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/bowlby_one"
+            android:shadowColor="#000000"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="10"
+            android:text="ARE YOU SURE YOU WANT TO QUIT?"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/oms"
+            android:layout_width="112dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="69dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/cyes" />
+
+        <ImageView
+            android:id="@+id/ihh"
+            android:layout_width="105dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="68dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/cno" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sureaskreset"
+        android:layout_width="351dp"
+        android:layout_height="417dp"
+        android:background="@drawable/ipad"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="249dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/bowlby_one"
+            android:shadowColor="#000000"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="10"
+            android:text="ARE YOU SURE YOU WANT TO RESTART?"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/omsr"
+            android:layout_width="112dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="69dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/cyes" />
+
+        <ImageView
+            android:id="@+id/ihhr"
+            android:layout_width="105dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="68dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/cno" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

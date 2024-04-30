@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="15dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp"
+    android:background="@drawable/table_bg"
+    tools:context=".CardGame">
+
+    <include
+        android:id="@+id/includer"
+        layout="@layout/images"
+        android:layout_width="wrap_content"
+        android:layout_height="560dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scoreLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:src="@drawable/score_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:src="@drawable/score_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Player 1: 0"
+            android:textColor="#673AB7"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+            app:layout_constraintStart_toStartOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Player 2: 0"
+            android:textColor="#673AB7"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fortunelayout"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/message"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fortunetext"
+            android:layout_width="155dp"
+            android:layout_height="90dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Random Fortune"
+            android:textAlignment="center"
+            android:textColor="#673AB7"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/presser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/pause"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/siting" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pausemenu"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/setting_bg"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/resume"
+            android:layout_width="50dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/reset"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/tuloy" />
+
+        <ImageView
+            android:id="@+id/reset"
+            android:layout_width="60dp"
+            android:layout_height="93dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ulet" />
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="60dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/card_home" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gomenu"
+        android:layout_width="400dp"
+        android:layout_height="600dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/card_gameover"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fscore1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginBottom="44dp"
+            android:fontFamily="sans-serif-black"
+            android:text="PLAYER 1: 0"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toTopOf="@+id/fscore2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/fscore2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginBottom="168dp"
+            android:fontFamily="sans-serif-black"
+            android:text="PLAYER 2: 0"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/restartgo"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/reset_gameover" />
+
+        <ImageView
+            android:id="@+id/homego"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/home_gameover" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ticketlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ticketchecker"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ticketcheckerimg" />
+
+        <ImageView
+            android:id="@+id/ticketno"
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="@+id/ticketchecker"
+            app:layout_constraintTop_toBottomOf="@+id/ticketchecker"
+            app:srcCompat="@drawable/cno" />
+
+        <ImageView
+            android:id="@+id/ticketyes"
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="@+id/ticketchecker"
+            app:layout_constraintTop_toBottomOf="@+id/ticketchecker"
+            app:srcCompat="@drawable/cyes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addcash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cashed" />
+
+        <TextView
+            android:id="@+id/cashadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:fontFamily="sans-serif-black"
+            android:text="0000"
+            android:textColor="#040404"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="@+id/imageView9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

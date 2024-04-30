@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/duck_game"
+    tools:context=".DuckMenu">
+
+    <ImageButton
+        android:id="@+id/imgBtn_duckMap"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Map Button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/duck_btnmap"
+        app:layout_constraintEnd_toEndOf="@+id/imgBtn_duckInstructions"
+        app:layout_constraintStart_toStartOf="@+id/imgBtn_duckInstructions"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtn_duckInstructions" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_duckPlay"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Play Button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/duck_btnplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_duckInstructions"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="How to Play Button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/duck_btnhow"
+        app:layout_constraintEnd_toEndOf="@+id/imgBtn_duckPlay"
+        app:layout_constraintStart_toStartOf="@+id/imgBtn_duckPlay"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtn_duckPlay" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="380dp"
+        android:layout_marginTop="40dp"
+        android:rotation="-3"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/duck_logo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ticketlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ticketchecker"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ticketcheckerimg" />
+
+        <ImageView
+            android:id="@+id/ticketno"
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="@+id/ticketchecker"
+            app:layout_constraintTop_toBottomOf="@+id/ticketchecker"
+            app:srcCompat="@drawable/cno" />
+
+        <ImageView
+            android:id="@+id/ticketyes"
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="@+id/ticketchecker"
+            app:layout_constraintTop_toBottomOf="@+id/ticketchecker"
+            app:srcCompat="@drawable/cyes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

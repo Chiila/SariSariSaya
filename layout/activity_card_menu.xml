@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/startgame_bg"
+    tools:context=".CardMenu">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="285dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mystic_icon" />
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Back to map"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_mapbtn"
+        app:layout_constraintEnd_toEndOf="@+id/instructions"
+        app:layout_constraintStart_toStartOf="@+id/instructions"
+        app:layout_constraintTop_toBottomOf="@+id/instructions" />
+
+    <ImageButton
+        android:id="@+id/instructions"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="How to play"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_gameplay"
+        app:layout_constraintEnd_toEndOf="@+id/start"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/start" />
+
+    <ImageButton
+        android:id="@+id/start"
+        android:layout_width="225dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="30dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Start game"
+        android:scaleType="fitCenter"
+        android:src="@drawable/start_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ticketlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ticketchecker"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ticketcheckerimg" />
+
+        <ImageView
+            android:id="@+id/ticketno"
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="@+id/ticketchecker"
+            app:layout_constraintTop_toBottomOf="@+id/ticketchecker"
+            app:srcCompat="@drawable/cno" />
+
+        <ImageView
+            android:id="@+id/ticketyes"
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="@+id/ticketchecker"
+            app:layout_constraintTop_toBottomOf="@+id/ticketchecker"
+            app:srcCompat="@drawable/cyes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
